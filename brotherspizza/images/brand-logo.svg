@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1122.5197 793.70081"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="logo.png"
+   inkscape:export-xdpi="28.376087"
+   inkscape:export-ydpi="28.376087"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="brand-logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.69222808"
+     inkscape:cx="466.60921"
+     inkscape:cy="351.76267"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.698px;font-family:Pitter;-inkscape-font-specification:Pitter;fill:#4f320c;stroke-width:0.702735;fill-opacity:1"
+       x="346.77295"
+       y="221.81598"
+       id="text1"
+       transform="scale(0.9809228,1.0194482)"
+       inkscape:export-filename="brand-logo.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="346.77295"
+         y="221.81598"
+         style="stroke-width:0.702735;fill:#4f320c;fill-opacity:1">Brothers</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:200px;font-family:Pitter;-inkscape-font-specification:Pitter;fill:#fe9600;fill-opacity:1"
+       x="326.63019"
+       y="330.81885"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="326.63019"
+         y="330.81885"
+         style="font-size:200px">Pizza</tspan></text>
+  </g>
+</svg>
