@@ -3,6 +3,8 @@
 	<head>
 		<?php
 			session_start();
+			require('dbConnection.php');
+			$connresult = db_connect();
 		?>
         <script>
 			console.log = function(){ }
@@ -28,6 +30,7 @@
 	</head>
 
     <body>
+	<?php include 'profile.php'?>
         <div class="spinners" id="spinner">
 			<div class="spinner-border spinner-border-sm" style="width: 3rem; height: 3rem;color: var(--primary)" role="status">
 				<span class="sr-only"></span>

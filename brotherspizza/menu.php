@@ -36,9 +36,14 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		<script src="./js/script.js"></script>
 	</head>
 
     <body>
+		<?php 
+		include 'pizzaDetails.php';
+		?>
+		<?php include 'profile.php'?>
         <div class="spinners" id="spinner">
 			<div class="spinner-border spinner-border-sm" style="width: 3rem; height: 3rem;color: var(--primary)" role="status">
 				<span class="sr-only"></span>
@@ -69,9 +74,9 @@
 						<li class="" id="show-drinks-button"><img src="./images/drinks.png" height="30">Drinks</li>
 						
 					</ul>
-					<form style="width: 100%; display: flex; flex-direction: column; align-items: end; justify-content: center; position: relative">
+					<!-- <form style="width: 100%; display: flex; flex-direction: column; align-items: end; justify-content: center; position: relative">
 						<span style="width: 100%; display: flex; justify-content: end;"><input type="text" placeholder="Search" style="padding: 9px 40px; border: 0; box-shadow: 0 0 1px rgba(0,0,0,0.3); min-width: 50%;background: url('./images/search.png') no-repeat 12px 15px white"><button class="order-button" type="submit">Search</button></span>
-					</form>
+					</form> -->
 				</div>
 
 				<h5 style="margin: 50px 0 20px 0; font-family: 'salsa';" class="pizza-list-grid">Non-Veg Pizza</h5>
@@ -81,7 +86,7 @@
 					while($item = $nonVegPizza->fetch_assoc()) {
 						echo '
 						<div class="grid-element">
-							<a href="pizzaDetails.php?id='.$item['p_id'].'">
+							<a onclick="openDescription(`'.$item['p_id'].'`)">
 								<div class="grid-image">
 									<img src="'.$item['p_image'].'">
 								</div>
@@ -186,7 +191,7 @@
 						while($item = $vegPizza->fetch_assoc()) {
 							echo '
 							<div class="grid-element">
-								<a href="pizzaDetails.php?id='.$item['p_id'].'">
+								<a onclick="openDescription(`'.$item['p_id'].'`)">
 									<div class="grid-image">
 										<img src="'.$item['p_image'].'">
 									</div>
@@ -293,7 +298,7 @@
 						while($item = $drinks->fetch_assoc()) {
 							echo '
 							<div class="grid-element">
-								<a href="pizzaDetails.php?id='.$item['d_id'].'">
+								<a onclick="openDescription(`'.$item['d_id'].'`)">
 									<div class="grid-image">
 										<img src="'.$item['d_image'].'">
 									</div>
@@ -436,7 +441,6 @@
         <!-- Footer -->
         <?php include 'footer.php'?>
     </body>
-	<script src="./js/script.js"></script>
 	<Script src="./js/cart.js"></script>
 	<script src="./js/form-validation.js"></script>
 </html>

@@ -105,7 +105,7 @@
                         <p>Total</p>
                         <p id="total-price" style="color: var(--secondary); font-weight: 600">0</p>
                     </div>
-                    <button class="order-button" id="checkout">Checkout</button>
+                    <button class="order-button" id="checkout">Order</button>
                 </div>
             </div>
         </div>

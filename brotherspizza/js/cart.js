@@ -343,6 +343,7 @@ function set_cookie(cookiename, cookievalue, hours) {
 
 function updateDb(_id, action, type) {
     // if (action == "add") {
+        // alert("dbupdated");
         var itemQty;
         var item = cart.find(obj => obj.id === _id);
         if (item != undefined) {
@@ -366,12 +367,15 @@ function clearClass() {
 function addToCart(_id) {
     // var type;
     // var repeated = false;
+    console.log();
     var pizza = pizzaDetails.find(obj => obj.id === _id);
     if (pizza != undefined) {
         if (cart.find(obj => obj.id === _id) == undefined) {
             cart.push(pizza);
             cartItemsCount++;
             $("#" + pizza.id).html("<i class='bi bi-cart-check'></i>");
+            $('#addToCartButton').attr("onclick", `removeFromCart('${_id}')`);
+            $("#addToCartButton").html("<i class='bi bi-trash3' style='margin-right: 10px'></i>Remove from Cart");
             $('#added-to-cart').addClass('added-to-cart');
             setTimeout(clearClass, 2000);
             //alert(pizza.type);
@@ -390,6 +394,8 @@ function addToCart(_id) {
             cart.push(drink);
             cartItemsCount++;
             $("#" + drink.id).html("<i class='bi bi-cart-check'></i>");
+            $('#addToCartButton').attr("onclick", `removeFromCart('${_id}')`);
+            $("#addToCartButton").html("<i class='bi bi-trash3' style='margin-right: 10px'></i>Remove from Cart");
             $('#added-to-cart').addClass('added-to-cart');
             setTimeout(clearClass, 2000);
             //alert(drink.type);
@@ -462,9 +468,9 @@ function addToCart(_id) {
     }
 }
 
-function removeFromCart(_id) {
+async function removeFromCart(_id) {
     var type;
-    $.each(cart, function(i, item) {
+    await $.each(cart, function(i, item) {
         console.log(item);
         if (_id == item.id) {
             cart.splice(i, 1);
@@ -476,6 +482,8 @@ function removeFromCart(_id) {
         createCartList();
         $('#cart-list').html(cartItems);
         $("#" + item.id).html("<i class='bi bi-cart-plus'>");
+        $('#addToCartButton').attr("onclick", `addToCart('${_id}')`);
+        $("#addToCartButton").html("<i class='bi bi-cart-plus' style='margin-right: 10px'></i>Add to Cart");
 
         if (cartItemsCount > 0) {
             $("#cart-notification").html(cartItemsCount);

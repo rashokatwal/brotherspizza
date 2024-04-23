@@ -154,7 +154,7 @@ if(isset($_POST['submit'])) {
 
     if ($email == "") {
 		$uid = 'cl'.rand(10, 10000);
-		$sql = "insert into users values('".$uid."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['password']."','client')";
+		$sql = "insert into users values('".$uid."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['password']."','client', 'default_user.png')";
 		if ($connresult->query($sql) === TRUE) {
 			echo "A record is inserted successfully";
 		} else {

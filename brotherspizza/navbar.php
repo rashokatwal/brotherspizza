@@ -11,7 +11,7 @@
                 <a href="contact.php"><li class="contact">Contact Us</li></a>
                 <a class="order-button sign-in" href="sign-in.php"><li>Sign In</li></a>
             </ul>
-            <a href="profile.php" style="margin-right: 20px; z-index: 99999;color: #000; font-size: 22px">
+            <a style="margin-right: 20px; z-index: 99999;color: #000; font-size: 22px; cursor: pointer" id="showProfile">
                 <i class="bi bi-person"></i>
             </a>
             <a id="cart" style="margin-right: 20px; z-index: 99999;text-decoration: none; position: relative;color: #000; font-size: 22px">

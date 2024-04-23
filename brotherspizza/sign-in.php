@@ -116,6 +116,7 @@ if(isset($_POST['submit'])) {
 			$fname =  $row['firstname'];
 			$lname =  $row['lastname'];
 			$email = $row['email'];
+			$profile_picture = $row['profile_pic'];
 		} 
     }
 
@@ -127,6 +128,7 @@ if(isset($_POST['submit'])) {
 			$_SESSION['lastname'] = $lname;
 			$_SESSION['email'] = $email;
 			$_SESSION['post'] = $post;
+			$_SESSION['profile_pic'] = $profile_picture;
 			if ($post == 'admin') {
 				header ('Location: admin.php');
 			}	

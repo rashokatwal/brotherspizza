@@ -1,37 +1,54 @@
-<!DOCTYPE html>
-<html>
-	<head>
+<div class="profile-outer">
+	<div class="profile-inner">
+	<i class="bi bi-x-lg" style="font-size: 25px; cursor: pointer; position: absolute; top: 10px; right: 20px" onclick="closeProfile()"></i>
+	<div class="user-detail">
+		<div class="left-section" style="margin: 60px 50px">
+			<div class="profile-picture" onclick="document.getElementById('input-pp').click()" style="background-image: url('./images/users/<?php echo $_SESSION['profile_pic']?>')"></div>
+			<form id="upload-pp" method="POST" action="uploadProfilePic.php" style="display: none">
+				<input type="file" id="input-pp" name="profile_pic" onchange="changeProfilePicture()">
+			</form>
+			<div style="margin: 20px 0 0 20px">
+				<h4 style="color: var(--primary)"><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']?></h4>
+				<h6><?php echo $_SESSION['email']?></h6><br>
+				<!-- <button class="order-button" onclick="openEditProfile()"><i class="bi bi-pencil-square"></i> Edit Profile</button> -->
+			</div>
+			<!-- <div class="profile-navigation">
+				<ul style="list-style-type: none; padding: 0; margin: 0">
+					<li class="active">Orders</li>
+					<li>Reviews</li>
+				</ul>
+			</div> -->
+		</div>
+		<div class="right-section" style="margin: 60px 50px">
+			<div class="orders">
+				<h5>Your Orders</h5>
+				<div class="order-list">
+				</div>
+			</div>
 
-		<?php
-			session_start();
+			<!-- <div class="reviews" style="display: none">
+				<h5>Your Reviews</h5>
+				<div class="review-list">
 
-			if (!isset($_SESSION['id'])) {
-				header('Location: sign-in.php');
-			}
-		?>
-        <script>
-			console.log = function(){ }
-			function myInitFunction() {
-				$('#spinner').fadeOut(200);
-			}
-		</script>
+				</div>
+			</div> -->
+		</div>
+	</div>
+	</div>
+</div>
 
-		<script>
-			window.addEventListener("load", myInitFunction)
-		</script>
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<title>Brothers Pizza</title>
-		<link rel="stylesheet" type="text/css" href="./css/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-	</head>
-	<body>
-        
-    </body>
-</html>
+<!-- <div class="editProfile-outer">
+	<div class="editProfile-inner">
+		<i class="bi bi-x-lg" style="font-size: 25px; cursor: pointer; position: absolute; top: 10px; right: 20px" onclick="closeEditProfile()"></i>
+        <h5 style="font-family: 'salsa';color: #4F320C;">Edit <span style="color: var(--primary)">Profile</span></h5>
+		<form action="editProfile.php" method="POST">
+			<span>First Name</span><br>
+			<input type="text" name="firstname"><br>
+			<span>Last Name</span><br>
+			<input type="text" name="lastname"><br>
+			<span>Email</span><br>
+			<input type="email" name="email"><br>
+			<input type="submit" name="submit" value="Save" class="order-button">
+		</form>
+	</div>
+</div> -->

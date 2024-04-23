@@ -3,6 +3,8 @@
 	<head>
 		<?php
 			session_start();
+			require('dbConnection.php');
+			$connresult = db_connect();
 		?>
         <script>
 			console.log = function(){ }
@@ -28,6 +30,7 @@
 	</head>
 
     <body>
+	<?php include 'profile.php'?>
             <div class="spinners" id="spinner">
 			<div class="spinner-border spinner-border-sm" style="width: 3rem; height: 3rem;color: var(--primary)" role="status">
 				<span class="sr-only"></span>
@@ -74,7 +77,7 @@
 				</div>
 
 				<div class="about-sections reverse">
-					<img src="./images/about(3).jpg">
+					<img src="./images/about(4).jpg">
 					<div class="description">
 						<h4 style="margin: 20px 0; color: #4F320C">Quality, Convenience, <span style="color: var(--primary)">Community</span></h4>
 						<p>Brothers Pizza is more than a delivery service; it's an experience. Quality ingredients, convenient service, and a commitment to community make us your go-to choice for pizza and drinks. Join us on this flavorful journey, and let Brothers Pizza be the delicious highlight of your day.</p>
